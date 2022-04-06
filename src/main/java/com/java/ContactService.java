@@ -18,13 +18,15 @@ public class ContactService {
 		this.validator = new Validator();
 	}
 
-	/**
-	 * create a method name as createPerson this is parameterized method
-	 */
 	public void createPerson(ContactPerson contact, Scanner sc) {
 
+		/**
+		 * variables in all string data type
+		 */
 		String firstName, lastName, address, city, state, zip, email, phoneNumber;
-
+		/**
+		 * display on console first name,you put the 1st name
+		 */
 		System.out.println("first name:");
 		while (true) {
 			try {
@@ -43,7 +45,9 @@ public class ContactService {
 				System.out.println(e.getMessage());
 			}
 		}
-
+		/**
+		 * display on console last name,you put the person last name
+		 */
 		System.out.println("last name:");
 		while (true) {
 			try {
@@ -62,7 +66,9 @@ public class ContactService {
 				System.out.println(e.getMessage());
 			}
 		}
-
+		/**
+		 * display on console address,you put the person address
+		 */
 		System.out.println("address:");
 		while (true) {
 			try {
@@ -81,7 +87,9 @@ public class ContactService {
 				System.out.println(e.getMessage());
 			}
 		}
-
+		/**
+		 * display on console person city ,you put the person city name
+		 */
 		System.out.println("city:");
 		while (true) {
 			try {
@@ -100,7 +108,9 @@ public class ContactService {
 				System.out.println(e.getMessage());
 			}
 		}
-
+		/**
+		 * display on console person state,you put the person state name
+		 */
 		System.out.println("state:");
 		while (true) {
 			try {
@@ -119,7 +129,9 @@ public class ContactService {
 				System.out.println(e.getMessage());
 			}
 		}
-
+		/**
+		 * display on console first name,you put the 1st name
+		 */
 		System.out.println("zip:");
 		while (true) {
 			try {
@@ -138,7 +150,9 @@ public class ContactService {
 				System.out.println(e.getMessage());
 			}
 		}
-
+		/**
+		 * display on console first name,you put the 1st name
+		 */
 		System.out.println("Phone Number:");
 		while (true) {
 			try {
@@ -157,7 +171,9 @@ public class ContactService {
 				System.out.println(e.getMessage());
 			}
 		}
-
+		/**
+		 * display on console first name,you put the 1st name
+		 */
 		System.out.println("email:");
 		while (true) {
 			try {

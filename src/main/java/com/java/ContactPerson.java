@@ -106,4 +106,12 @@ public class ContactPerson {
 				+ "]";
 	}
 
+	/**
+	 * created a get method name as getName The get method returns the value of the
+	 * variable
+	 */
+
+	public String getName() {
+		return firstName + " " + lastName;
+	}
 }
