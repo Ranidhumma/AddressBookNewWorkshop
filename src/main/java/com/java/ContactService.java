@@ -3,7 +3,7 @@ package com.java;
 import java.util.Scanner;
 
 public class ContactService {
-	private Scanner sc;
+	static Scanner sc;
 	private Validator validator;
 
 	/**
@@ -22,9 +22,6 @@ public class ContactService {
 		 * variables in all string data type
 		 */
 		String firstName, lastName, address, city, state, zip, email, phoneNumber;
-		/**
-		 * display on console first name,you put the 1st name
-		 */
 		System.out.println("first name:");
 		while (true) {
 			try {
@@ -43,9 +40,7 @@ public class ContactService {
 				System.out.println(e.getMessage());
 			}
 		}
-		/**
-		 * display on console last name,you put the person last name
-		 */
+
 		System.out.println("last name:");
 		while (true) {
 			try {
@@ -64,9 +59,7 @@ public class ContactService {
 				System.out.println(e.getMessage());
 			}
 		}
-		/**
-		 * display on console address,you put the person address
-		 */
+
 		System.out.println("address:");
 		while (true) {
 			try {
@@ -85,9 +78,7 @@ public class ContactService {
 				System.out.println(e.getMessage());
 			}
 		}
-		/**
-		 * display on console person city ,you put the person city name
-		 */
+
 		System.out.println("city:");
 		while (true) {
 			try {
@@ -106,9 +97,7 @@ public class ContactService {
 				System.out.println(e.getMessage());
 			}
 		}
-		/**
-		 * display on console person state,you put the person state name
-		 */
+
 		System.out.println("state:");
 		while (true) {
 			try {
@@ -127,9 +116,7 @@ public class ContactService {
 				System.out.println(e.getMessage());
 			}
 		}
-		/**
-		 * display on console first name,you put the 1st name
-		 */
+
 		System.out.println("zip:");
 		while (true) {
 			try {
@@ -148,9 +135,7 @@ public class ContactService {
 				System.out.println(e.getMessage());
 			}
 		}
-		/**
-		 * display on console first name,you put the 1st name
-		 */
+
 		System.out.println("Phone Number:");
 		while (true) {
 			try {
@@ -169,9 +154,7 @@ public class ContactService {
 				System.out.println(e.getMessage());
 			}
 		}
-		/**
-		 * display on console first name,you put the 1st name
-		 */
+
 		System.out.println("email:");
 		while (true) {
 			try {
@@ -198,8 +181,7 @@ public class ContactService {
 	public void editExistingContact(ContactPerson contact) {
 		while (true) {
 
-			System.out.println(
-					"1 (FirstName)\n2 (LastName)\n3 (Address)\n4 (City)\n5 (State)\n6 (Zip)\n7 (Phone)\n8 (Email)\n9 (Exit)");
+			System.out.println("1 FirstName\n2 LastName\n3 Address\n4 City\n5 State\n6 Zip\n7 Phone\n8 Email\n9 Exit");
 			int options = Integer.parseInt(sc.nextLine());
 
 			switch (options) {
@@ -265,9 +247,10 @@ public class ContactService {
 
 	public void displayContact(ContactPerson contact) {
 		if (contact == null) {
-			System.out.println("No contact found");
+			System.out.println("Contact not found");
 			return;
 		}
 		System.out.println(contact);
 	}
+
 }

@@ -6,13 +6,7 @@ import java.util.Scanner;
 public class AddressbookMain {
 
 	private static Scanner scanner = new Scanner(System.in);
-	/**
-	 * create object for ContactService class object name as contactService
-	 */
 	static ContactService contactService;
-	/**
-	 * create object for AddressBook class object name as addressBook
-	 */
 	static AddressBook addressBook;
 
 	/**
@@ -27,6 +21,9 @@ public class AddressbookMain {
 		contactService.displayContact(addressBook.searchByName(name));
 	}
 
+	/**
+	 * create a method name as editContact
+	 */
 	public static void editContact() {
 
 		System.out.println("Enter Person Name");
@@ -43,9 +40,26 @@ public class AddressbookMain {
 		System.out.println("Person Not Found");
 	}
 
+	/**
+	 * create a method name as createContact
+	 */
 	public static void createContact() {
 
 		addressBook.addContact(contactService.createContact());
+	}
+
+	/**
+	 * create a method name as deleteContact
+	 */
+	public static void deleteContact() {
+		System.out.println("Enter Person Name");
+		String name = scanner.nextLine();
+
+		if (Objects.nonNull(addressBook.searchByName(name))) {
+			addressBook.deleteContact(name);
+			return;
+
+		}
 	}
 
 	public static void main(String[] args) {
@@ -54,7 +68,7 @@ public class AddressbookMain {
 		contactService = new ContactService(scanner);
 		while (true) {
 			System.out.println(
-					"\nAddress Book Options:\n1 (Add new contact)\n2 (Edit existing contact)\n3 (View all contact)\n4 (Find contact)\n5 Exit");
+					"\nAddressbook Choose Options:\n 1. Add new contact\n 2. Edit existing contact\n 3 Delete contact\n 4. Show all Contacts\n 5. Find contact\n 6.Exit");
 			int option = Integer.parseInt(scanner.nextLine());
 
 			switch (option) {
@@ -68,16 +82,18 @@ public class AddressbookMain {
 				break;
 
 			case 3:
-
-				System.out.println(addressBook);
+				deleteContact();
 				break;
 
 			case 4:
-
-				findContact();
+				System.out.println(addressBook);
 				break;
 
 			case 5:
+				findContact();
+				break;
+
+			case 6:
 				System.out.println("Exit");
 				break;
 
@@ -85,5 +101,16 @@ public class AddressbookMain {
 				System.out.println("Invalid");
 			}
 		}
+	}
+
+	public static void displayContact(ContactPerson contact) {
+
+		if (contact == null) {
+
+			System.out.println("Contact not found");
+			return;
+		}
+
+		System.out.println(contact);
 	}
 }
