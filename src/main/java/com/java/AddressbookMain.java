@@ -7,7 +7,7 @@ public class AddressbookMain {
 
 	public static void main(String[] args) {
 
-		System.out.println("Welcome to Address Book Workshop ");
+		System.out.println("Welcome to Address Book Workshop");
 
 		/**
 		 * create object for ContactService class,object name as contactService
